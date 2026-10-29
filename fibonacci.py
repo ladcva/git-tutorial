@@ -1,6 +1,6 @@
 def fibonacci_iterative(n: int) -> int:
-    if n < 0:
-        raise ValueError("n must be a non-negative integer.")
+    if n <= 1:
+        raise ValueError("n must be greater than 1.")
     if n == 0:
         return 0
     
