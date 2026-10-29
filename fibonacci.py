@@ -1,10 +1,13 @@
-def fibonacci_iterative(n):
-  a, b = 0, 1
-  result = []
-  for _ in range(n):
-    result.append(a)
-    a, b = b, a + b
-  return result
+def fibonacci_iterative(n: int) -> int:
+    if n < 0:
+        raise ValueError("n must be a non-negative integer.")
+    if n == 0:
+        return 0
+    
+    prev, curr = 0, 1
+    for _ in range(2, n + 1):
+        prev, curr = curr, prev + curr
+    return curr
 
 
 if __name__ == "__main__":
